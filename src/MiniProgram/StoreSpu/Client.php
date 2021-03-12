@@ -67,4 +67,20 @@ class Client extends BaseClient
         return $this->httpPostJson('product/spu/search', $params);
     }
 
+    /**
+     * 
+     *
+     * @param string $productId
+     * 
+     * @return \Psr\Http\Message\ResponseInterface|\EasyWeChat\Kernel\Support\Collection|array|object|string
+     *
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function listing($productId)
+    {
+        return $this->httpPostJson('product/spu/listing', [
+            'product_id' => $productId,
+        ]);
+    }
 }

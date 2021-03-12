@@ -47,6 +47,8 @@ use EasyWeChat\Kernel\ServiceContainer;
  * @property \EasyweChat\MiniProgram\Store\Client               $store
  * @property \EasyWeChat\MiniProgram\StoreSpu\Client            $store_spu
  * @property \EasyWeChat\MiniProgram\StoreCoupon\Client         $store_coupon
+ * @property \EasyWeChat\MiniProgram\StoreOrder\Client          $store_order
+ * @property \EasyWeChat\MiniProgram\StoreSku\Client            $store_sku
  */
 class Application extends ServiceContainer
 {
@@ -82,6 +84,8 @@ class Application extends ServiceContainer
         Store\ServiceProvider::class,
         StoreSpu\ServiceProvider::class,
         StoreCoupon\ServiceProvider::class,
+        StoreOrder\ServiceProvider::class,
+        StoreSku\ServiceProvider::class,
     ];
 
     /**

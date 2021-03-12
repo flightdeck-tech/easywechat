@@ -62,4 +62,21 @@ class Client extends BaseClient
         ];
         return $this->httpPostJson('product/coupon/get_list', $params);
     }
+
+    /**
+     * 
+     *
+     * @param mixed $id
+     * 
+     * @return \Psr\Http\Message\ResponseInterface|\EasyWeChat\Kernel\Support\Collection|array|object|string
+     *
+     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function get($id)
+    {
+        return $this->httpPostJson('product/coupon/get', [
+            'coupon_id' => intval($id),
+        ]);
+    }
 }

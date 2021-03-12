@@ -52,4 +52,9 @@ class Client extends BaseClient
     {
         return $this->httpPostJson('product/brand/get', []);
     }
+
+    public function getDeliveryCompanyList()
+    {
+        return $this->httpPostJson('product/delivery/get_company_list', []);
+    }
 }
